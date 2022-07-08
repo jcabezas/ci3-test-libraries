@@ -6,7 +6,7 @@ class Test extends CI_Controller {
     public function index() {
         $this->load->helper('url');
         $links = '<a href="'.base_url("index.php/test/pdf").'">Test Mpdf Library</a><br>';
-        $links .= '<a href="'.base_url("index.php/test/excel").'">Test Office/Spreadsheet Library</a><br>';
+        $links .= '<a href="'.base_url("index.php/test/excel").'">Test PhpOffice/PhpSpreadsheet Library</a><br>';
         echo $links;
     }
 
@@ -40,9 +40,4 @@ class Test extends CI_Controller {
         $this->load->library("excel");
         $this->excel->generate($data);
     }
-    public function excel2() {
-        $this->load->library("excel");
-        $this->excel->test();
-    }
-    
 }
